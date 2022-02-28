@@ -1,0 +1,1149 @@
+/* Base du site  */
+body {
+margin:0;
+padding:0;
+font-family: sans-serif;
+background-image: url('firstimage.jpg');
+}
+
+ /* Bar de navigation */
+header {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 0 100px;
+  background: #1f1f1c;
+  width:100%;
+  box-sizing: border-box;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #1f1f1c;
+   color: white;
+   text-align: center;
+   font-size: 13px;
+}
+header .logo
+{
+  color : #33cc33;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  float: left;
+  font-weight: bold;
+  display: flex;
+align-items: center;
+justify-content: center;
+     animation: fadeInSlow 3s forwards;
+}
+
+
+header nav{
+  float: right;
+}
+
+header nav ul {
+  margin:0;
+  padding: 0;
+  display:  flex;
+}
+
+header nav ul li {
+  list-style: none;
+  position: relative;
+}
+header nav ul li ul{
+  position: absolute;
+  left: 0;
+  background: #0d0d0d;
+  display: none;
+
+}
+
+header nav ul li ul li:hover{
+background-color: grey;
+}
+
+header nav ul li.active ul {
+  display: block;
+}
+header nav ul li.sub-menu:before {
+  content: '\f0d7';
+  font-family: fontawesome;
+  position:  absolute;
+  line-height: 50px;
+  color: white;
+  right: 5px;
+  opacity: 0;
+  animation: fadeInSlow 3s forwards;
+}
+header nav ul li.active.sub-menu:before {
+  content: '\f0d8';
+  opacity: 0;
+  animation: fadeInSlow 3s forwards;
+}
+header nav ul li ul li {
+  display: block;
+  width: 200px;
+}
+
+header nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  padding: 16px 20px;
+  color: white;
+  text-decoration: none;
+     animation: fadeInSlow 3s forwards;
+}
+
+
+header nav ul li a:hover,
+header nav ul li a.active
+{
+  color: white;
+}
+ /* Icone menu quand page web infèrieur a 991px */
+.menu-toggle
+{
+  color: #33cc33;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+/* Bar de navigation quand page web infèrieur a 991px  */
+@media (max-width: 991px)
+{
+  header
+  {
+    padding: 0 20px;
+  }
+  .menu-toggle
+  {
+    opacity: 0;
+    animation: fadeInSlow 3s forwards;
+    display: block;
+  }
+  header nav{
+    position: absolute;
+    width:100%;
+    height: calc(100vh - 50px);
+    background:  #272725;
+    top: 50px;
+    left:-100%;
+    transition: 0.5s;
+}
+  header nav.active
+  {
+    left:0;
+  }
+  header nav ul{
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a {
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+
+  header nav ul li.active ul{
+    position: relative;
+
+  }
+  header nav ul li ul li{
+    width: 100%
+  }
+    header nav ul li ul li:hover{
+      color: #333333;
+    }
+}
+.section {
+  margin: auto;
+}
+
+.animated-text span {
+ color: #33cc33;
+ opacity: 0;
+ animation: fadeInSlow 3s forwards;
+}
+@keyframes fadeInSlow {
+ 0% {
+   opacity: 0;
+ }
+ 100% {
+   opacity: 1;
+ }
+}
+/* Formulaire inscription design*/
+#formulaire_inscription {
+    
+    width: 400px ;
+   color: #33cc33;
+    background: rgb(51,51,51,0.8);
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+        margin-bottom: 200px;
+    border-style: ridge;
+}
+
+#formulaire_inscription .section{
+    margin: auto;
+}
+
+#formulaire_inscription input{
+    margin: 20px;
+}
+
+#formulaire_inscription .btn_{
+    margin: 20px;
+    border-radius:12px 0 12px 0;
+	background: #33cc33;
+	border:none;
+	color:#333333 ; 
+	font:bold 12px Verdana;
+	padding:6px 0 6px 0;
+	box-shadow:1px 1px 3px #999;
+    width: 250px;
+
+}
+
+.titre_formulaire {
+        
+     color: #33cc33;
+    background: #1f1f1c;
+  width:100%;
+ 
+}
+
+#formulaire_inscription #v_pseudo{
+    color: red ;
+    margin-bottom: 10px;
+}
+
+#formulaire_inscription #v_mail{
+    color: red ;
+    margin-bottom: 10px;
+}
+
+#formulaire_inscription #v_mdp{
+    color: red ;
+    margin-bottom: 10px;
+}
+
+#boutonvalidation{
+
+	background: #1f1f1c;
+
+  border-color: #33cc33;
+
+  border-radius: 5px;
+
+  text-shadow: 5px 3px 5px #1a1a1a;
+
+  color: #33cc33;
+
+  font-size: 15px;
+
+  padding: 10px 20px 10px 20px;
+
+  text-decoration: none;
+ margin:  30px;
+}
+
+
+
+#boutonvalidation:hover {
+
+  background: #363630;
+
+  text-decoration: none;
+
+}
+
+}
+#boutonvalidation:disabled{
+  	background: red;
+
+  border-color: #33cc33;
+
+  border-radius: 5px;
+
+  text-shadow: 5px 3px 5px #1a1a1a;
+
+  color: #1f1f1c ;
+
+  font-size: 15px;
+
+  padding: 10px 20px 10px 20px;
+
+  text-decoration: none;
+ margin:  30px;
+
+}
+
+#avertissement_inscription{
+    background-color: red;
+    color: white;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+/* Formulaire connexion design*/
+#formulaire_connexion .section{
+    margin: auto;
+}
+
+#formulaire_connexion input{
+    margin: 20px;
+}
+#formulaire_connexion {
+    width: 400px ;
+   color: #33cc33;
+    background: rgb(51,51,51,0.8);
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+    border-style: ridge;
+}
+#formulaire_connexion .form-group {
+    margin: 20px;
+}
+#boutonconnexion{
+
+
+	background: #1f1f1c;
+
+  border-color: #33cc33;
+
+  border-radius: 5px;
+
+  text-shadow: 5px 3px 5px #1a1a1a;
+
+  color: #33cc33;
+
+  font-size: 15px;
+
+  padding: 10px 20px 10px 20px;
+
+  text-decoration: none;
+
+}
+
+
+
+#boutonconnexion:hover {
+
+  background: #363630;
+
+  text-decoration: none;
+
+}
+
+}
+#rep_co {
+     color: red;
+    margin-bottom: 20px;
+}
+
+
+/* ----------- Shop ----------- */
+#shopping-cart {
+   width: 600px ;
+height: 400px;    
+   color: #33cc33;
+    background: rgb(51,51,51,0.8);
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+    border-style: ridge;
+}
+
+
+#titre_shop{
+            
+color: #33cc33;
+background:  #1f1f1c;
+width:100%;
+font-size: 25px;   
+font-family: sans-serif; 
+font-weight: bold;  
+text-align: center;
+    
+}
+
+#shopping-cart-bis{
+    width: 400px;    
+margin: auto;
+margin-top: 50px;
+    text-align: center;
+    
+    }
+
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+
+.item:nth-child(3) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+
+
+
+.image {
+  margin-right: 50px;
+}
+
+
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+}
+
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #86939E;
+}
+
+.Color {
+  margin-top: 30px;
+}
+
+img {
+  width:50%;
+}
+.box{
+padding: 5px;
+}
+.box a{
+  width: 40px;
+  height: 40px;
+  float: left;
+  text-indent: -9999px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#couleur{
+	background: #1f1f1c;
+  border-color: #33cc33;
+  border-radius: 5px;
+  text-shadow: 5px 3px 5px #1a1a1a;
+  color: #33cc33;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+ 	margin:  10px;	
+}
+
+#map{
+	background: #1f1f1c;
+  border-color: #33cc33;
+  border-radius: 5px;
+  text-shadow: 5px 3px 5px #1a1a1a;
+  color: #33cc33;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+ 	margin:  10px;
+}
+
+#boutonperso{
+	background: #1f1f1c;
+  border-color: #33cc33;
+  border-radius: 5px;
+  text-shadow: 5px 3px 5px #1a1a1a;
+  color: #33cc33;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+ 	margin:  100px;
+}
+
+/* ----------- End Shop ----------- */
+
+
+/* Plateforme de J*/
+#canvasSnake{
+
+	padding-left: 0;
+
+  padding-right: 0;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+  margin-top:20px;
+
+  display: block;
+
+  width: 500px;
+
+  border-style:solid;
+
+  border-width: thick;
+
+  border-color: #363630;
+
+  border-radius: 5px;
+
+}
+
+
+
+#boutons{
+
+text-align: center;
+
+margin: auto;
+
+margin-top: 5px;
+
+}
+
+
+
+#boutonJouer {
+
+	background: #1f1f1c;
+
+  border-color: #33cc33;
+
+  border-radius: 5px;
+
+  text-shadow: 5px 3px 5px #1a1a1a;
+
+  color: #33cc33;
+
+  font-size: 31px;
+
+  padding: 10px 20px 10px 20px;
+
+  text-decoration: none;
+
+}
+
+
+
+#boutonJouer:hover {
+
+  background: #363630;
+
+  text-decoration: none;
+
+}
+
+
+
+#score{
+
+	margin-left:45%;
+
+	margin-right:45%;
+
+	margin-top:7%;
+
+	text-align: center;
+
+	color: #33cc33;
+
+	border-style: outset;
+
+  border-width: thin;
+
+  background-color: #1f1f1c;
+
+  border-color: #33cc33;
+
+  border-radius: 5px;
+
+}
+
+#meilleurScore{
+
+	margin-left:43%;
+
+	margin-right:43%;
+
+	margin-top:1%;
+
+	text-align: center;
+
+	color: #33cc33;
+
+	border-style: outset;
+
+  border-width: thin;
+
+  background-color: #1f1f1c;
+
+  border-color: #33cc33;
+
+  border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+/* Chat design */ 
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-image: url(firstimage.jpg);
+}
+
+.chatbox {
+
+  width:1000px;
+  min-width: 390px;
+  height: 600px;
+  background: #1f1f1c;
+  padding: 25px;
+  margin:  150px auto;
+  box-shadow: 0 3px black;
+}
+
+.box{
+        display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#chatlogs{
+  padding: 10px;
+  width: 100%;
+  height: 450px;
+  background: #4d4c4c;
+  overflow-y: scroll;
+}
+
+
+.chat {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  background: #4d4c4c ;
+  margin-bottom: 10px;
+text-align: center;
+}
+
+.chat .user-name {
+  width: 140px;
+  height: 30px;
+ margin: auto;
+  border-radius: 10px;
+}
+
+
+
+.self .user-level {
+  width: 110px;
+  height: 15px;
+ margin: auto;
+  border-radius: 10px;
+background-color: white;    
+font-size: 10px;    
+text-align: center;
+float: left;    
+}
+.friend .user-level {
+  width: 140px;
+  height: 15px;
+ margin: auto;
+  border-radius: 10px;
+background-color: white;    
+font-size: 10px;    
+text-align: center;
+float: left;    
+}
+
+
+.friend .chat-date {
+  width: 110px;
+  height: 20px;
+ margin: auto;
+  border-radius: 10px;
+color: #1f1f1c; 
+font-size: 10px;    
+text-align: center;
+float: right;    
+}
+
+
+.self .chat-date {
+  width: 110px;
+  height: 15px;
+ margin: auto;
+  border-radius: 10px;
+color: #1f1f1c;    
+font-size: 10px;    
+text-align: center;
+float: left;    
+}
+
+
+.friend .user-name{
+  background: #339933;
+text-align: center;
+}
+
+.self .user-name {
+  background: #66ff33;
+}
+
+.chat .chat-messages {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 10px 0;
+  background: #1ddced;
+  border-radius: 10px;
+  color:white;
+  font-size: 18px;
+}
+
+.friend .chat-messages {
+  background: #339933;
+}
+
+.self .chat-messages {
+  background: #66ff33;
+  order:-1;
+}
+
+.chat-form {
+  margin-top: 20px;
+  display: flex;
+  align-items:flex-start;
+}
+
+.chat-form input {
+  background: grey;
+  width: 800px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 3px;
+  resize: none;
+  padding: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.chat-form textarea:focus {
+  background: darkgrey;
+}
+
+.chat-form button {
+  background: #66ff33;
+  padding: 5px 15px;
+ height: 50px;
+  font-size: 30px;
+  color: white;
+  border : none;
+  margin: 0 10px;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 #00cc00;
+  cursor:pointer;
+}
+
+.chat-form button:hover {
+  background:  #009900;
+}
+
+
+.bouton_signalement:hover {
+
+  background: #363630;
+
+  text-decoration: none;
+
+}
+.bouton_signalement{
+
+width: 80px;
+height :20px;    
+	background: #1f1f1c;
+
+  border-color: #33cc33;
+
+  border-radius: 5px;
+
+  text-shadow: 5px 3px 5px #1a1a1a;
+
+  color: #33cc33;
+
+  font-size: 10px;
+
+position: right;
+
+  text-decoration: none;
+
+}
+
+
+
+
+/* Design tableau classement */
+
+#classement table {
+border: medium solid #00cc00;
+border-collapse: collapse;
+width: 50%;
+margin : auto;    
+margin-top: 250px;
+margin-bottom: 250px;
+}
+#classement #entete  {
+border: thin solid #00cc00;
+width: 50%;
+padding: 5px;
+background-color: #1f1f1c;
+color: #00cc00;    
+}
+
+#classement .entete_bis  {
+border: thin solid #00cc00;
+width: 50%;
+padding: 5px;
+background-color: #1f1f1c;
+    color: #00cc00;    
+}
+
+#classement td {
+border: thin solid #00cc00;
+width: 50%;
+padding: 5px;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.2); ;
+}
+
+#classement tbody tr:nth-child(2){ 
+border: thin solid #00cc00;
+width: 50%;
+padding: 5px;
+background-color: red;
+}
+/* Design tableau liste utilisateurs */
+
+#tableau_util table {
+border: medium solid #00cc00;
+border-collapse: collapse;
+width: 50%;
+margin : auto;    
+margin-top: 250px;
+margin-bottom: 250px;
+}
+
+
+#tableau_util th{
+border: thin solid #00cc00;
+width: 50%;
+padding: 5px;
+background-color: #1f1f1c;
+    color: #00cc00;    
+}
+#tableau_util #entete_level{
+border: thin solid #00cc00;
+width: 25%;
+padding: 5px;
+background-color: #1f1f1c;
+    color: #00cc00;    
+}
+
+#tableau_util .tab_level{
+border: thin solid #00cc00;
+padding: 5px;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.2); 
+}
+#tableau_util .tab_pseudo{
+border: thin solid #00cc00;
+padding: 5px;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.2); 
+}
+
+#tableau_util .tab_action{
+border: thin solid #00cc00;
+padding: 5px;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.2); 
+}
+
+/* Design Infos mon profil*/
+
+#infos { 
+    width: 600px ;
+   color: #33cc33;
+    background: rgb(51,51,51,0.8);
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+    border-style: ridge;
+}    
+
+#infos_bis{ 
+width: 400px;    
+margin: auto;
+margin-top: 50px;
+    text-align: center;
+}    
+
+.info_joueur_{
+    color: white;
+}
+#ask_infos { 
+background: rgb(51,51,51,0.8);
+width: 650px;
+margin: auto;   
+text-align: center;
+margin-bottom: 200px;
+margin-top: 200px;
+color: #33cc33;
+border-style: ridge;
+box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);    
+}    
+
+#titre_mes_infos{
+            
+color: #33cc33;
+background: #1f1f1c;
+width:100%;
+font-size: 25px;   
+font-family: sans-serif; 
+font-weight: bold;    
+    
+}
+#titre_mes_infos_modif{
+            
+color: #33cc33;
+background: #1f1f1c;
+width:100%;
+font-size: 25px;   
+font-family: sans-serif;    
+font-weight: bold;      
+    
+}
+
+#bouton_modif_infos{
+
+
+	background: #1f1f1c;
+
+  border-color: #33cc33;
+
+  border-radius: 5px;
+
+  text-shadow: 5px 3px 5px #1a1a1a;
+
+  color: #33cc33;
+
+  font-size: 15px;
+
+  padding: 10px 20px 10px 20px;
+
+  text-decoration: none;
+ margin:  30px;
+}
+
+
+
+#bouton_modif_infos:hover {
+
+  background: #363630;
+
+  text-decoration: none;
+
+}
+#bouton_modif_infos_maj{
+
+
+	background: #1f1f1c;
+
+  border-color: #33cc33;
+
+  border-radius: 5px;
+
+  text-shadow: 5px 3px 5px #1a1a1a;
+
+  color: #33cc33;
+
+  font-size: 15px;
+
+  padding: 10px 20px 10px 20px;
+
+  text-decoration: none;
+ margin:  30px;
+}
+
+
+
+#bouton_modif_infos_maj:hover {
+
+  background: #363630;
+  text-decoration: none;
+
+}
+
+#bouton_modif_infos_term{
+
+  background: #1f1f1c;
+  border-color: #33cc33;
+  border-radius: 5px;
+  text-shadow: 5px 3px 5px #1a1a1a;
+  color: #33cc33;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin:  30px;
+}
+
+
+
+#bouton_modif_infos_term:hover {
+
+  background: #363630;
+  text-decoration: none;
+
+}
+
+#profil_modif_info {
+    margin: 20px;
+}
+#profil_modif_info input{
+    margin: 30px;
+    
+    
+}
+
+#modif_profil_bouton{
+    margin: 30px;
+}
+
+
+#ask_infos #v_pseudo_modif{
+    color: red ;
+    margin-bottom: 10px;
+}
+
+#ask_infos #v_mail_modif{
+    color: red ;
+    margin-bottom: 10px;
+}
+
+#ask_infos #v_mdp_modif{
+    color: red ;
+    margin-bottom: 10px;
+}
+
+#reponse_modif {
+    color: white;
+    margin-bottom: 50px;
+}
+
+#ask_infos input{
+    width: 400px;
+    margin: 50px;
+}
+
+#ask_infos #sexe input{
+    width: 10px;
+}
+
+/* ----------- Help box----------- */
+.helpbox {
+  width: 750px;
+  height: 423px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+.title2 {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  border-top: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+
+#pomme {
+  width:3%;
+}
+
+#banane {
+  width:4%;
+}
+
+#bombe {
+  width:4%;
+}
+#diamant {
+    width:4%;
+}
+
+.arrow {
+  float:left;
+  margin-left: 100px;
+}
+
+.blocHelp p{
+  margin: 5px;
+}
+
+.blocHelp p{
+  margin-top: 50px;
+}
+
+/* ----------- End Help box----------- */
+
+
+
